@@ -1,12 +1,14 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "AssetActions/QuickAssetAction.h"
+#include "DebugHeader.h"
+//编辑器工具库
+#include "EditorUtilityLibrary.h"
+//编辑器资源库
+//默认是Include不了的，因为这个文件不在原先被包含的module里面
+#include "EditorAssetLibrary.h"
+
 
 void UQuickAssetAction::TestFunc()
 {
-	if (GEngine)
-	{
-		GEngine->AddOnScreenDebugMessage(-1,8.f,FColor::Cyan,TEXT("QuickAssetAction Working"));
-	}
+	Print(TEXT("Working"),FColor::Cyan);
+	PrintLog(TEXT("Working"));
 }
